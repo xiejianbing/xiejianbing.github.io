@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-cn">
   <head>
     
 <meta charset="UTF-8"/>
@@ -16,6 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
+
+  <meta name="description" content="java ios github hexo"/>
 
 
 
@@ -44,6 +46,8 @@
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
 
 
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
 
 
 
@@ -96,16 +100,16 @@
         <li class="mobile-menu-item">
           
           
-            Home
+            首页
           
         </li>
       </a>
     
-      <a href="/archives/">
+      <a href="/archives">
         <li class="mobile-menu-item">
           
           
-            Archives
+            归档
           
         </li>
       </a>
@@ -114,7 +118,16 @@
         <li class="mobile-menu-item">
           
           
-            Tags
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
           
         </li>
       </a>
@@ -135,16 +148,16 @@
           <a class="menu-item-link" href="/">
             
             
-              Home
+              首页
             
           </a>
         </li>
       
         <li class="menu-item">
-          <a class="menu-item-link" href="/archives/">
+          <a class="menu-item-link" href="/archives">
             
             
-              Archives
+              归档
             
           </a>
         </li>
@@ -153,7 +166,16 @@
           <a class="menu-item-link" href="/tags">
             
             
-              Tags
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
             
           </a>
         </li>
@@ -195,19 +217,14 @@
       
         
         
+          
+        
 
         
-          <h1 id="Github-SSH配置"><a href="#Github-SSH配置" class="headerlink" title="Github SSH配置"></a>Github SSH配置</h1><ul>
-<li><p>创建密钥</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;xiejb@163.com&quot;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>密匙的创建方式有多种，此处是通过命令创建 ，三次回车，即可设置密码为空</p>
-</blockquote>
-</li>
-<li><p>将生成的id_rsa.pub文件 (在目录C:\Users\Administrator.ssh) 内容添加到github上,登录github设置即可</p>
-<img src="/2017/12/28/github/ssh_key.jpg"></li>
-</ul>
-
+          <p>github相关配置</p>
+          <div class="read-more">
+            <a href="/2017/12/28/github/" class="read-more-link">阅读更多</a>
+          </div>
         
       
     </div>
@@ -244,173 +261,14 @@
       
         
         
+          
+        
 
         
-          <blockquote>
-<p>作为一个猿儿，怎么能少了写博客呢，也一直在写着，中间也折腾了各种方法，但最终还是决定换成了简单易上手的Hexo+github pages+Mweb了，把重点放在内容上才是正确的选择,既然这样，那本文就先简单介绍一下  <a href="https://hexo.io" target="_blank" rel="noopener">hexo</a> 以及使用hexo 、github、 <a href="http://zh.mweb.im" target="_blank" rel="noopener">Mweb</a>(基于markdown的写作工具)  搭建博客和部署等详细信息。</p>
-</blockquote>
-<h1 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h1><p>欢迎来到 <a href="https://hexo.io" target="_blank" rel="noopener">hexo</a> !    如本文不能满足您的需求，你也可查看官方 <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">中文文档</a>  如遇到一些问题 可查看 <a href="https://hexo.io/zh-cn/docs/troubleshooting.html" target="_blank" rel="noopener">问题解答</a></p>
-<h1 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h1><blockquote>
-<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-</blockquote>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="Hexo安装前提"><a href="#Hexo安装前提" class="headerlink" title="Hexo安装前提"></a>Hexo安装前提</h2><p>安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：</p>
-<ul>
-<li><a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a></li>
-<li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
-</ul>
-<p>可通过终端命令确认上述环境是否安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ git --version</span><br></pre></td></tr></table></figure>
-<p>安装后命令显示结果如下：<br><img src="/2017/12/21/hexo/15138271006708.jpg"></p>
-<p>如果您的电脑中已经安装上述必备程序，那么恭喜！接下来只需要使用 npm 即可完成 Hexo 的安装。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>如果您的电脑中尚未安装所需要的程序，请根据以下安装指示完成安装。</p>
-<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><blockquote>
-<p>Mac 用户<br>在编译时可能会遇到问题，请先到 App Store 安装 Xcode，Xcode 完成后，启动并进入 Preferences -&gt; Download -&gt; Command Line Tools -&gt; Install 安装命令行工具。</p>
-</blockquote>
-<ul>
-<li><strong>Windows:</strong>下载并安装 <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git下载</a>。 <strong>另</strong>: 有个叫做 msysGit 的项目也提供了安装包 <a href="http://msysgit.github.com/" target="_blank" rel="noopener">Git下载2</a> 这种方式完成安装之后，就可以使用命令行的 git 工具（而且已经自带了 ssh 客户端）了，另外还有一个图形界面的 Git 项目管理工具。</li>
-<li><p><strong>Mac：</strong>在Mac上安装Git有3中方式，如下：</p>
-<ol>
-<li><strong>推荐</strong> 使用 <a href="https://github.com/mxcl/homebrew" target="_blank" rel="noopener">homebrew</a>：<code>$ brew install git.</code></li>
-<li><p>通过 [MacPorts] (<a href="http://www.macports.org" target="_blank" rel="noopener">http://www.macports.org</a>) 安装。如果已经装好了 MacPorts，用下面的命令安装 Git：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo port install git-core +svn +doc +bash_completion +gitweb</span><br></pre></td></tr></table></figure>
-<p>这种方式就不需要再自己安装依赖库了，Macports 会帮你搞定这些麻烦事。一般上面列出的安装选项已经够用，要是你想用 Git 连接 Subversion 的代码仓库，还可以加上 +svn 选项</p>
-</li>
-<li>图形化的 Git 安装工具 <a href="http://sourceforge.net/projects/git-osx-installer/" target="_blank" rel="noopener">下载</a></li>
-</ol>
-</li>
-<li><strong>Linux</strong> (Ubuntu, Debian):   <code>$ sudo apt-get install git-core</code> 或 <code>$ apt-get install git</code></li>
-<li><strong>Linux</strong> (Fedora, Red Hat, CentOS):  <code>$ sudo yum install git-core</code>  </li>
-</ul>
-<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><ul>
-<li>下载 [安装程序] (<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a>) 来安装。</li>
-<li>hexo官方推荐安装 Node.js 的方式是使用 <a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a>。</li>
-</ul>
-<p>cURL:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure>
-<p>或者 Wget:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure>
-<p>安装完成后，重启终端并执行下列命令即可安装 Node.js。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install stable</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>Windows 用户<br>对于windows用户来说，建议使用安装程序进行安装。安装时，请勾选Add to PATH选项。<br>另外，您也可以使用Git Bash，这是git for windows自带的一组程序，提供了Linux风格的shell，在该环境下，您可以直接用上面提到的命令来安装Node.js。打开它的方法很简单，在任意位置单击右键，选择“Git Bash Here”即可。由于Hexo的很多操作都涉及到命令行，您可以考虑始终使用Git Bash来进行操作。</p>
-</blockquote>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h1 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h1><p>hexo安装完成后，接下来就是建站了，建站其实也很简单，首先进入一个目录(作为存放博客资源的目录),然后执行如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init  blog</span><br><span class="line">$ cd blog</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>blog 为文件夹名称,<br>hexo server 是启动本地博客服务命令</p>
-</blockquote>
-<p>正常情况下，终端中将会输出如下的结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
-<p>这样的话博客算是初步建成了，打开浏览器，输入地址：<code>http://localhost:4000/</code>就可以访问了，将会显示如下界面<br><img src="/2017/12/21/hexo/15139224941949.jpg"></p>
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="目录说明"><a href="#目录说明" class="headerlink" title="目录说明"></a>目录说明</h2><p>网站初步建成后，接下来就可以进行相应的配置了,我们可以先看一下目录信息：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">_config.yml		</span><br><span class="line">source		</span><br><span class="line">package.json		</span><br><span class="line">themes</span><br><span class="line">node_modules		</span><br><span class="line">scaffolds</span><br></pre></td></tr></table></figure>
-<p><strong>_config.yml</strong> : 网站的 配置 信息，您可以在此配置大部分的参数<br><strong>package.json</strong>:  应用程序的信息。EJS, Stylus 和 Markdown renderer 已默认安装，您可以自由移除。<br><strong>scaffolds</strong> :  [模版] (<a href="https://hexo.io/zh-cn/docs/writing.html)文件夹。当您新建文章时，Hexo" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/writing.html)文件夹。当您新建文章时，Hexo</a> 会根据 scaffold 来建立文件。</p>
-<blockquote>
-<p>Hexo的模板是指在新建的markdown文件中默认填充的内容。例如，如果您修改scaffold/post.md中的Front-matter内容，那么每次新建一篇文章时都会包含这个修改。</p>
-</blockquote>
-<p><strong>source</strong> :Hexo的模板是指在新建的markdown文件中默认填充的内容。例如，如果您修改scaffold/post.md中的Front-matter内容，那么每次新建一篇文章时都会包含这个修改。<br><strong>themes</strong>:  <a href="https://hexo.io/zh-cn/docs/themes.html" target="_blank" rel="noopener">主题</a> 文件夹。Hexo 会根据主题来生成静态页面</p>
-<h2 id="网站配置"><a href="#网站配置" class="headerlink" title="网站配置"></a>网站配置</h2><p>网站的主要配置都在根目录 <code>_config.yml</code> 文件里面:</p>
-<p><strong>网站</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Hexo</span><br><span class="line">subtitle:</span><br><span class="line">description:</span><br><span class="line">author: John Doe</span><br><span class="line">language:</span><br><span class="line">timezone:</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>title</td>
-<td>网站标题</td>
-</tr>
-<tr>
-<td>subtitle</td>
-<td>网站副标题</td>
-</tr>
-<tr>
-<td>description</td>
-<td>网站描述</td>
-</tr>
-<tr>
-<td>author</td>
-<td>您的名字</td>
-</tr>
-<tr>
-<td>language</td>
-<td>网站使用的语言 可以选配 en 或者 zh-cn</td>
-</tr>
-<tr>
-<td>timezone</td>
-<td>网站时区。Hexo 默认使用您电脑的时区。<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank" rel="noopener">时区列表</a>。比如说：Asia/Shanghai</td>
-</tr>
-</tbody>
-</table>
-<p>其中，description主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。author参数用于主题显示文章的作者。</p>
-<p><strong>网址</strong><br>这个部分需要修改的只有 url 选项，改成博客地址行了。后面的链接生成规则，保持不变即可。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">url: http://yoursite.com     #网址</span><br><span class="line">root: /                                  #网站根目录</span><br><span class="line">permalink: :year/:month/:day/:title/       #文章的永久链接格式</span><br><span class="line">permalink_defaults:   #永久链接中各部分的默认值</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p> 网站存放在子目录<br> 如果您的网站存放在子目录中，例如 <a href="http://yoursite.com/blog，" target="_blank" rel="noopener">http://yoursite.com/blog，</a> 则请将您的 url 设为 <a href="http://yoursite.com/blog" target="_blank" rel="noopener">http://yoursite.com/blog</a> 并把 root 设为 /blog/。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: landscape</span><br></pre></td></tr></table></figure>
-<p>这一组配置是用来定义主题和配置插件的，可以看到，官方默认的主题叫做 <code>landscape</code>  ,更多主题 可以查看<a href="https://hexo.io/themes/" target="_blank" rel="noopener">官方列表 </a></p>
-<p>例如选择yelee<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/MOxFIVE/hexo-theme-yelee.git themes/yelee</span><br></pre></td></tr></table></figure></p>
-<p>把从官方列表中查到的主题仓库地址 <code>git clone</code> 下来，放到 <code>themes/</code>下相应的目录中，然后我们修改博客根目录下的 <code>_config.yml</code>文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: yelee</span><br></pre></td></tr></table></figure>
-<h2 id="文章资源文件管理"><a href="#文章资源文件管理" class="headerlink" title="文章资源文件管理"></a>文章资源文件管理</h2><blockquote>
-<p>对于那些想要更有规律地提供图片和其他资源以及想要将他们的资源分布在各个文章上的人来说，Hexo也提供了更组织化的方式来管理资源。这个稍微有些复杂但是管理资源非常方便的功能可以通过将 <code>config.yml</code>文件中的 <code>post_asset_folder</code> 选项设为 <code>true</code> 来打开</p>
-</blockquote>
-<p>1.首先确认<code>_config.yml</code> 中有 <code>post_asset_folder:true</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
-<p>2.创建博客是使用命令创建：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new test</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>使用完命令之后，在source/_post文件夹里面就会出现一个“test.md”的文件和一个“test”的文件夹。</p>
-</blockquote>
-<p>下一步就是把需要的图片放到新创建的那个<strong>文件夹</strong>里面去。</p>
-<p>引用方法如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img example.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure>
-<p>更多信息，请查阅 Hexo 的 <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">官方文档</a>。</p>
-<h1 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h1><p>撰写博文也非常简单，在你的博客目录 blog 下键入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
-<p>您可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。Hexo 有三种默认布局：post、page 和 draft，它们分别对应不同的路径，而您自定义的其他布局和 post 相同，都将储存到 source/_posts 文件夹。</p>
-<p>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post &lt;title&gt;</span><br></pre></td></tr></table></figure>
-<p>就可以新建一篇博文了，如果你想写一篇草稿，而不发布的话，那么你可以键入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new draft &lt;title&gt;</span><br></pre></td></tr></table></figure>
-<p>更多信息，请查看 <a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="noopener">官方文档</a></p>
-<h1 id="博客部署"><a href="#博客部署" class="headerlink" title="博客部署"></a>博客部署</h1><p>我们用来托管博客的服务叫做  <a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages</a>，它是 Github 用来提供给个人/组织或者项目的网页服务，只需要部署到你的 Github Repository，推送代码，便可以实时呈现。</p>
-<p>首先，你需要有一个 Github 的账号。然后创建一个名称为 <code>&lt;username&gt;.github.io</code>的仓库来托管网页即可。</p>
-<p>以我的 Github 为例，我的用户名是 xiejianbing，所以创建一个名为 xiejianbing.github.io 的仓库，创建的仓库地址便是：<a href="https://github.com/xiejianbing/xiejianbing.github.io.git" target="_blank" rel="noopener">https://github.com/xiejianbing/xiejianbing.github.io.git</a> 创建完后，我们可以暂时不用管它，不需要往仓库里面 push 任何的东西。</p>
-<p><strong>Hexo 部署配置</strong><br>在博客的根目录下有一个名为<code>_config.yml</code>的文件，这是博客的主配置文件。前面的其他部分我们先不理会，后文再谈，我们先看最后的 <code>Deployment</code>配置项：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type:</span><br></pre></td></tr></table></figure>
-<p>根据官方的文档显示，现在 Hexo 支持 Git、Heroku、Rsync、OpenShift、FTPSync 等部署方式，我们选择 Git 来部署的话，需要首先安装 hexo-deployer-git 插件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>然后编辑上面的配置文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: &lt;repository url&gt;</span><br><span class="line">  branch: [branch]</span><br><span class="line">  message: [message]</span><br></pre></td></tr></table></figure>
-<p>我们需要把刚才创建的仓库地址添加进来，branch 和 message 项可以不填，默认情况下推送到 master 分支，这里我建议使用 SSH 加密的仓库地址（参看 <a href="https://help.github.com/articles/generating-an-ssh-key/" target="_blank" rel="noopener">Github 官方文档配置</a> SSH 免密操作）</p>
-<p>保存配置文件之后，我们在博客的根目录键入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<p>上述命令可以简化成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
-<p>便可以把博客部署到 Github 了。现在，所有人都可以通过 <code>http://&lt;username&gt;.github.io</code> 来访问自己的博客。</p>
-<h1 id="博客域名绑定"><a href="#博客域名绑定" class="headerlink" title="博客域名绑定"></a>博客域名绑定</h1><blockquote>
-<p>我在阿里云上够买了一个域名 <code>xiejianbing.com</code>  现在绑定到我的博客地址xiejianbing.github.io上</p>
-</blockquote>
-<ul>
-<li><p>第一步 添加CNAME文件</p>
-<p>在个人博客仓库的根目录中新建文件<code>CNAME</code>（注意没有后缀），该文件内容就是需要绑定的域名地址(自己购买的域名地址)<code>xiejianbing.com</code>，告诉Github Pages服务器你想指定的域名。该域名不能包含前缀信息，即不能添加<code>http:\\</code>前缀。</p>
-</li>
-<li><p>第二步 绑定域名</p>
-<p>登录<a href="https://netcn.console.aliyun.com/core/domain/list" target="_blank" rel="noopener">阿里云控制台</a> 进行域名解析  如下图：</p>
-<img src="/2017/12/21/hexo/yumingjiexi.jpg">
-<p>记录值，也就是ip地址 可以通过<code>ping  xiejianbing.github.io</code>获取</p>
-</li>
-</ul>
-
+          <p>hexo的安装配置 、使用hexo、github pages搭建博客以及部署博客等详细信息</p>
+          <div class="read-more">
+            <a href="/2017/12/21/hexo/" class="read-more-link">阅读更多</a>
+          </div>
         
       
     </div>
@@ -521,11 +379,11 @@
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+    主题 - 
     <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
   </span>
 
@@ -542,6 +400,7 @@
     </span>
     <span class="author">xiejianbing</span>
   </span>
+  
 </div>
 
       </footer>
@@ -555,6 +414,8 @@
 
 
     
+  
+
 
 
 
@@ -567,6 +428,8 @@
     <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
   
 
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
   
 
 

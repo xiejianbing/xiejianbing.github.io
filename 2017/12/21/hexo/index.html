@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-cn">
   <head>
     
 <meta charset="UTF-8"/>
@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="基于Hexo的博客系统"/>
+  <meta name="description" content="hexo的安装配置 、使用hexo、github pages搭建博客以及部署博客等详细信息"/>
 
 
 
@@ -48,6 +48,8 @@
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
 
 
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
 
 
 
@@ -100,16 +102,16 @@
         <li class="mobile-menu-item">
           
           
-            Home
+            首页
           
         </li>
       </a>
     
-      <a href="/archives/">
+      <a href="/archives">
         <li class="mobile-menu-item">
           
           
-            Archives
+            归档
           
         </li>
       </a>
@@ -118,7 +120,16 @@
         <li class="mobile-menu-item">
           
           
-            Tags
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
           
         </li>
       </a>
@@ -139,16 +150,16 @@
           <a class="menu-item-link" href="/">
             
             
-              Home
+              首页
             
           </a>
         </li>
       
         <li class="menu-item">
-          <a class="menu-item-link" href="/archives/">
+          <a class="menu-item-link" href="/archives">
             
             
-              Archives
+              归档
             
           </a>
         </li>
@@ -157,7 +168,16 @@
           <a class="menu-item-link" href="/tags">
             
             
-              Tags
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
             
           </a>
         </li>
@@ -193,7 +213,7 @@
     
     
   <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
+    <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
       <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#官方文档"><span class="toc-text">官方文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#什么是Hexo"><span class="toc-text">什么是Hexo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo安装前提"><span class="toc-text">Hexo安装前提</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Git"><span class="toc-text">安装Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Node-js"><span class="toc-text">安装Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Hexo"><span class="toc-text">安装Hexo</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#建站"><span class="toc-text">建站</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置"><span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#目录说明"><span class="toc-text">目录说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网站配置"><span class="toc-text">网站配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文章资源文件管理"><span class="toc-text">文章资源文件管理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#写作"><span class="toc-text">写作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#博客部署"><span class="toc-text">博客部署</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#博客域名绑定"><span class="toc-text">博客域名绑定</span></a></li></ol>
     </div>
@@ -360,6 +380,9 @@
 <li><p>第一步 添加CNAME文件</p>
 <p>在个人博客仓库的根目录中新建文件<code>CNAME</code>（注意没有后缀），该文件内容就是需要绑定的域名地址(自己购买的域名地址)<code>xiejianbing.com</code>，告诉Github Pages服务器你想指定的域名。该域名不能包含前缀信息，即不能添加<code>http:\\</code>前缀。</p>
 </li>
+</ul>
+<p>  注： 在写文章时 CNAME文件放在hexo的source文件夹下  否则在执行<code>hexo g -d</code> 命令时会被删除</p>
+<ul>
 <li><p>第二步 绑定域名</p>
 <p>登录<a href="https://netcn.console.aliyun.com/core/domain/list" target="_blank" rel="noopener">阿里云控制台</a> 进行域名解析  如下图：</p>
 <img src="/2017/12/21/hexo/yumingjiexi.jpg">
@@ -374,26 +397,24 @@
       
       
 
-  <div class="post-copyright">
-    <p class="copyright-item">
-      <span>Author: </span>
-      <a href="http://xiejianbing.github.io">xiejianbing</a>
-    </p>
-    <p class="copyright-item">
-      <span>Link: </span>
-      <a href="http://xiejianbing.github.io/2017/12/21/hexo/">http://xiejianbing.github.io/2017/12/21/hexo/</a>
-    </p>
-    <p class="copyright-item">
-      <span>License: </span>
+
+
       
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-    </p>
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.jpg" title="wechat">
+        </label>
+      
+      
+    </div>
   </div>
 
-
-
-      
-      
     
 
     
@@ -412,13 +433,13 @@
       <a class="prev" href="/2017/12/28/github/">
         <i class="iconfont icon-left"></i>
         <span class="prev-text nav-default">Github</span>
-        <span class="prev-text nav-mobile">Prev</span>
+        <span class="prev-text nav-mobile">上一篇</span>
       </a>
     
     
       <a class="next" href="/2017/11/29/first/">
         <span class="next-text nav-default">序言</span>
-        <span class="prev-text nav-mobile">Next</span>
+        <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
     
@@ -484,11 +505,11 @@
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+    主题 - 
     <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
   </span>
 
@@ -505,6 +526,7 @@
     </span>
     <span class="author">xiejianbing</span>
   </span>
+  
 </div>
 
       </footer>
@@ -520,6 +542,8 @@
 
 
     
+  
+
 
 
 
@@ -532,6 +556,8 @@
     <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
   
 
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
   
 
 
