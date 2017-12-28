@@ -190,6 +190,32 @@ git clone https://github.com/MOxFIVE/hexo-theme-yelee.git themes/yelee
 ```
 theme: yelee
 ```
+## 文章资源文件管理
+
+> 对于那些想要更有规律地提供图片和其他资源以及想要将他们的资源分布在各个文章上的人来说，Hexo也提供了更组织化的方式来管理资源。这个稍微有些复杂但是管理资源非常方便的功能可以通过将 `config.yml`文件中的 `post_asset_folder` 选项设为 `true` 来打开
+
+1.首先确认`_config.yml` 中有 `post_asset_folder:true`。
+
+```
+_config.yml
+post_asset_folder: true
+```
+
+2.创建博客是使用命令创建：
+
+```
+hexo new test
+```
+
+> 使用完命令之后，在source/_post文件夹里面就会出现一个“test.md”的文件和一个“test”的文件夹。
+
+下一步就是把需要的图片放到新创建的那个**文件夹**里面去。
+
+引用方法如下：
+
+```
+{% asset_img example.jpg This is an example image %}
+```
 
 更多信息，请查阅 Hexo 的 [官方文档](https://hexo.io/zh-cn/docs/index.html)。
 
@@ -212,6 +238,7 @@ hexo new post <title>
 ```
 hexo new draft <title>
 ```
+
 更多信息，请查看 [官方文档](https://hexo.io/zh-cn/docs/writing.html)
 
 # 博客部署
@@ -261,33 +288,19 @@ hexo g -d
 ```
 便可以把博客部署到 Github 了。现在，所有人都可以通过 `http://<username>.github.io` 来访问自己的博客。
 
+# 博客域名绑定
 
+>我在阿里云上够买了一个域名 `xiejianbing.com`  现在绑定到我的博客地址xiejianbing.github.io上
 
-# 文章资源文件管理
+* 第一步 添加CNAME文件
 
-> 对于那些想要更有规律地提供图片和其他资源以及想要将他们的资源分布在各个文章上的人来说，Hexo也提供了更组织化的方式来管理资源。这个稍微有些复杂但是管理资源非常方便的功能可以通过将 `config.yml`文件中的 `post_asset_folder` 选项设为 `true` 来打开
+  在个人博客仓库的根目录中新建文件`CNAME`（注意没有后缀），该文件内容就是需要绑定的域名地址(自己购买的域名地址)`xiejianbing.com`，告诉Github Pages服务器你想指定的域名。该域名不能包含前缀信息，即不能添加`http:\\`前缀。
 
-1.首先确认`_config.yml` 中有 `post_asset_folder:true`。
+* 第二步 绑定域名
 
-```
-_config.yml
-post_asset_folder: true
-```
+  登录[阿里云控制台](https://netcn.console.aliyun.com/core/domain/list) 进行域名解析  如下图：
 
-2.创建博客是使用命令创建：
+  {% asset_img yumingjiexi.jpg %}
 
-```
-hexo new test
-```
+  记录值，也就是ip地址 可以通过`ping  xiejianbing.github.io`获取
 
-> 使用完命令之后，在source/_post文件夹里面就会出现一个“test.md”的文件和一个“test”的文件夹。
-
-下一步就是把需要的图片放到新创建的那个**文件夹**里面去。
-
-引用方法如下：
-
-```
-{% asset_img example.jpg This is an example image %}
-```
-
- 
