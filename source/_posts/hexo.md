@@ -20,7 +20,7 @@ tags:
 安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：
 
 *  [Node.js](https://nodejs.org/)
-*   [Git](https://git-scm.com/)
+*  [Git](https://git-scm.com/)
 
 可通过终端命令确认上述环境是否安装：
 
@@ -29,8 +29,7 @@ $ node -v
 $ git --version
 ```
 安装后命令显示结果如下：
-
-![](media/15138271006708.jpg)
+{% asset_img 15138271006708.jpg %}
 
 如果您的电脑中已经安装上述必备程序，那么恭喜！接下来只需要使用 npm 即可完成 Hexo 的安装。
 
@@ -42,17 +41,17 @@ $ npm install -g hexo-cli
 ## 安装Git
 
 > Mac 用户
-在编译时可能会遇到问题，请先到 App Store 安装 Xcode，Xcode 完成后，启动并进入 Preferences -> Download -> Command Line Tools -> Install 安装命令行工具。
+> 在编译时可能会遇到问题，请先到 App Store 安装 Xcode，Xcode 完成后，启动并进入 Preferences -> Download -> Command Line Tools -> Install 安装命令行工具。
 
 
 * **Windows:**下载并安装 [Git下载](https://git-scm.com/download/win)。 **另**: 有个叫做 msysGit 的项目也提供了安装包 [Git下载2](http://msysgit.github.com/) 这种方式完成安装之后，就可以使用命令行的 git 工具（而且已经自带了 ssh 客户端）了，另外还有一个图形界面的 Git 项目管理工具。
 * **Mac：**在Mac上安装Git有3中方式，如下：
     1. **推荐** 使用 [homebrew](https://github.com/mxcl/homebrew)：`$ brew install git.`
     2. 通过 [MacPorts] (http://www.macports.org) 安装。如果已经装好了 MacPorts，用下面的命令安装 Git：
-    
+
      ```
      $ sudo port install git-core +svn +doc +bash_completion +gitweb
-    ```
+     ```
     这种方式就不需要再自己安装依赖库了，Macports 会帮你搞定这些麻烦事。一般上面列出的安装选项已经够用，要是你想用 Git 连接 Subversion 的代码仓库，还可以加上 +svn 选项
     3. 图形化的 Git 安装工具 [下载](http://sourceforge.net/projects/git-osx-installer/)
 * **Linux** (Ubuntu, Debian):   `$ sudo apt-get install git-core` 或 `$ apt-get install git`
@@ -79,8 +78,8 @@ $ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
 $ nvm install stable
 ```
 > Windows 用户
-对于windows用户来说，建议使用安装程序进行安装。安装时，请勾选Add to PATH选项。
-另外，您也可以使用Git Bash，这是git for windows自带的一组程序，提供了Linux风格的shell，在该环境下，您可以直接用上面提到的命令来安装Node.js。打开它的方法很简单，在任意位置单击右键，选择“Git Bash Here”即可。由于Hexo的很多操作都涉及到命令行，您可以考虑始终使用Git Bash来进行操作。
+> 对于windows用户来说，建议使用安装程序进行安装。安装时，请勾选Add to PATH选项。
+> 另外，您也可以使用Git Bash，这是git for windows自带的一组程序，提供了Linux风格的shell，在该环境下，您可以直接用上面提到的命令来安装Node.js。打开它的方法很简单，在任意位置单击右键，选择“Git Bash Here”即可。由于Hexo的很多操作都涉及到命令行，您可以考虑始终使用Git Bash来进行操作。
 
 ## 安装Hexo
 
@@ -109,7 +108,7 @@ INFO  Start processing
 INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
 ```
 这样的话博客算是初步建成了，打开浏览器，输入地址：`http://localhost:4000/ `就可以访问了，将会显示如下界面
-![](media/15139224941949.jpg)
+{% asset_img 15139224941949.jpg %}
 
 # 配置
 
@@ -148,14 +147,14 @@ language:
 timezone:
 ```
 
-| 参数 | 描述 |
-| --- | --- |
-| title | 网站标题 |
-| subtitle | 网站副标题 |
-| description | 网站描述 |
-| author | 您的名字 |
-| language | 网站使用的语言 可以选配 en 或者 zh-cn |
-| timezone | 网站时区。Hexo 默认使用您电脑的时区。[时区列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)。比如说：Asia/Shanghai |
+| 参数          | 描述                                       |
+| ----------- | ---------------------------------------- |
+| title       | 网站标题                                     |
+| subtitle    | 网站副标题                                    |
+| description | 网站描述                                     |
+| author      | 您的名字                                     |
+| language    | 网站使用的语言 可以选配 en 或者 zh-cn                 |
+| timezone    | 网站时区。Hexo 默认使用您电脑的时区。[时区列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)。比如说：Asia/Shanghai |
 
 其中，description主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。author参数用于主题显示文章的作者。
 
@@ -171,7 +170,7 @@ permalink_defaults:   #永久链接中各部分的默认值
 ```
 
 >  网站存放在子目录
-如果您的网站存放在子目录中，例如 http://yoursite.com/blog， 则请将您的 url 设为 http://yoursite.com/blog 并把 root 设为 /blog/。
+>  如果您的网站存放在子目录中，例如 http://yoursite.com/blog， 则请将您的 url 设为 http://yoursite.com/blog 并把 root 设为 /blog/。
 
 
 ```
@@ -263,6 +262,32 @@ hexo g -d
 便可以把博客部署到 Github 了。现在，所有人都可以通过 `http://<username>.github.io` 来访问自己的博客。
 
 
-未完待续!
 
+# 文章资源文件管理
 
+> 对于那些想要更有规律地提供图片和其他资源以及想要将他们的资源分布在各个文章上的人来说，Hexo也提供了更组织化的方式来管理资源。这个稍微有些复杂但是管理资源非常方便的功能可以通过将 `config.yml`文件中的 `post_asset_folder` 选项设为 `true` 来打开
+
+1.首先确认`_config.yml` 中有 `post_asset_folder:true`。
+
+```
+_config.yml
+post_asset_folder: true
+```
+
+2.创建博客是使用命令创建：
+
+```
+hexo new test
+```
+
+> 使用完命令之后，在source/_post文件夹里面就会出现一个“test.md”的文件和一个“test”的文件夹。
+
+下一步就是把需要的图片放到新创建的那个**文件夹**里面去。
+
+引用方法如下：
+
+```
+{% asset_img example.jpg This is an example image %}
+```
+
+ 
