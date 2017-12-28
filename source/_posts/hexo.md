@@ -1,6 +1,7 @@
 ---
 title: 基于Hexo的博客系统
 date: 2017-12-21 10:21:20
+description: hexo的安装配置 、使用hexo、github pages搭建博客以及部署博客等详细信息
 tags:
     - hexo
 ---
@@ -296,6 +297,9 @@ hexo g -d
 
   在个人博客仓库的根目录中新建文件`CNAME`（注意没有后缀），该文件内容就是需要绑定的域名地址(自己购买的域名地址)`xiejianbing.com`，告诉Github Pages服务器你想指定的域名。该域名不能包含前缀信息，即不能添加`http:\\`前缀。
 
+
+  注： 在写文章时 CNAME文件放在hexo的source文件夹下  否则在执行`hexo g -d` 命令时会被删除
+
 * 第二步 绑定域名
 
   登录[阿里云控制台](https://netcn.console.aliyun.com/core/domain/list) 进行域名解析  如下图：
@@ -303,4 +307,3 @@ hexo g -d
   {% asset_img yumingjiexi.jpg %}
 
   记录值，也就是ip地址 可以通过`ping  xiejianbing.github.io`获取
-

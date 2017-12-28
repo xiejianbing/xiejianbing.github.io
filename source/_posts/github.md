@@ -1,6 +1,7 @@
 ---
 title: Github
 date: 2017-12-28 15:31:03
+description: github相关配置
 tags:
   - github
 ---
@@ -18,3 +19,5 @@ tags:
 * 将生成的id_rsa.pub文件 (在目录C:\Users\Administrator.ssh) 内容添加到github上,登录github设置即可
 
   {% asset_img ssh_key.jpg %}
+
+
