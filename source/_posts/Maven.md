@@ -23,6 +23,8 @@ tags:
 
 > 安装maven之前 需要确认正确安装了jdk
 
+**windows下下载安装**
+
 * 下载
 
   ​     下载地址`http://maven.apache.org/download.cgi `  [ 点击下载](http://maven.apache.org/download.cgi )  ,下载后解压到指定位置
@@ -31,6 +33,53 @@ tags:
 
 > 环境变量中配置JAVA_HOME = D:\Program Files\Java\jdk1.8.0_112
 > 环境变量 path 加  D:\Program Files\apache-maven\bin（maven解压后的路径）
+
+**Linux下下载安装**
+
+* 创建一个文件夹  进入目录  
+
+``` 
+mkdir /usr/local/maven
+cd /usr/local/maven
+```
+
+* 下载maven的tar包
+
+  ````
+  wget http://mirrors.hust.edu.cn/apache/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz
+  ````
+
+* 解压tar
+
+  ```
+  tar -xvf apache-maven-3.5.2-bin.tar.gz 
+  ```
+
+* 配置环境
+
+     ```
+     //打开环境变量的配置文件
+     vim /etc/profile
+     ```
+
+//新增行MAVEN_HOME,等于号后面是maven解压的文件夹地址
+export MAVEN_HOME=/usr/local/maven/apache-maven-3.5.2
+//找到PATH行,追加$MAVEN_HOME/bin
+例如
+PATH=`$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH`
+//重新刷新配置文件
+source /etc/profile
+     ```
+
+* 测试
+
+```
+mvn -version
+```
+
+
+
+
 
 
 ## 4.验证结果

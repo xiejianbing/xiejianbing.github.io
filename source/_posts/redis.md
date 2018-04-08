@@ -12,12 +12,13 @@ tags:
 $ wget http://download.redis.io/releases/redis-4.0.8.tar.gz
 $ tar -zxvf redis-4.0.8.tar.gz (解压后将文件移动到制定目录 如：（/usr/local/redis)
 $ cd redis-4.0.8
+// 需要先安装gcc环境
 $ make
 ```
 
 > make: cc: Command not found make: *** [adlist.o] Error 127
 >
-> 新安装的Linux系统没有安装gcc环境，需要安装gcc
+> 新安装的Linux系统没有安装gcc环境，需要安装gcc  安装完成后需要重启一下
 >
 >  `yum  install  gcc-c++`
 
@@ -111,9 +112,33 @@ service redis start
 service redis stop
 ```
 
+
+
+或者
+
+>vi /etc/rc.d/rc.local
+>
+>service redis start &
+
+
+
+
+
 5、重启动检查 
 init 6
 
 ```
 ps -ef|grep redis
 ```
+
+
+### 简单设置
+
+
+
+1，设置用户密码
+
+修改redis.conf 文件
+
+requirepass  123456
+
